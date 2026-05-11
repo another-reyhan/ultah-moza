@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 20th Birthday, Moza! 🐱</title>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&family=Quicksand:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Custom Cursor & Trail -->
+    <div id="cursor-trail-container"></div>
+    <div id="custom-cursor"><i class="fa-solid fa-paw"></i></div>
+
+    <!-- Floating Background Elements -->
+    <div class="floating-bg" id="floating-bg"></div>
+
+    <!-- Pre-loader -->
+    <div id="preloader">
+        <div class="loader-content">
+            <span id="loader-number">1</span>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content" class="hidden">
+
+
+
+        <!-- Hero Section -->
+        <section id="hero" class="glass-section">
+            <h1 id="typewriter-text"></h1>
+            <div class="giant-age">
+                <span>2</span>
+                <span class="cat-zero">
+                    <!-- Iconify SVG for Cat Face -->
+                    <img src="https://api.iconify.design/twemoji:cat-face.svg" alt="Cat Face">
+                </span>
+            </div>
+            <button id="evasive-btn" class="glass-btn primary-btn">Mulai Petualangan 🐾</button>
+        </section>
+
+        <!-- Timeline Section -->
+        <section id="timeline" class="glass-section">
+            <h2 class="section-title">Jejak Langkah Kita</h2>
+            <div class="timeline-container">
+                <!-- Item 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">18 Januari 2025</span>
+                        <img src="assets/firstdate.jpeg"
+                            alt="Memory" class="timeline-img">
+                        <h3 class="timeline-title">Pertemuan Pertama</h3>
+                        <p class="timeline-caption">Hari di mana kita pertama kali ngobrol tentang kucing.
+                            Momen yang nggak akan pernah aku lupain.</p>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">12 Mei 2025</span> <img src="assets/ultah19.jpeg" alt="Ulang Tahun ke-19" class="timeline-img">
+                        <h3 class="timeline-title">Ulang Tahun ke-19 🎂</h3>
+                        <p class="timeline-caption">Momen waktu kita ngerayain ulang tahun kamu tahun lalu. Rasanya baru kemarin aku ngasih kamu kado ultah, sekarang kamu udah kepala dua wkwkwkw!</p>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">18 Januari 2026</span>
+                        <img src="assets/anniv1.jpeg"
+                            alt="Memory" class="timeline-img">
+                        <h3 class="timeline-title">Anniversary 1 Tahun</h3>
+                        <p class="timeline-caption">Akhirnya kita bisa merayakan hari anniversary kita yang ke 1 tahun waktu itu!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="glass-section">
+            <h2 class="section-title">Galeri Memori</h2>
+            <div class="polaroid-stack" id="polaroid-stack">
+                <!-- Foto akan digenerate oleh JavaScript -->
+            </div>
+            <p class="instruction-text"><i class="fa-solid fa-hand-pointer"></i> Geser atau klik foto untuk melihat
+                selanjutnya!</p>
+        </section>
+
+        <!-- Quiz Section -->
+        <section id="quiz" class="glass-section">
+            <h2 class="section-title">Kuis Gerbang Memori</h2>
+            <div class="glass-card quiz-card" id="quiz-card">
+                <p class="quiz-desc">Jawab 3 pertanyaan ini untuk membuka kunci surat cinta!</p>
+                <div class="quiz-item" id="q1">
+                    <label>Siapa nama lengkap pacar kamu? (awas aja lino, martin dll!)</label>
+                    <input type="text" placeholder="Jawab di sini..." class="quiz-input">
+                </div>
+                <div class="quiz-item" id="q2">
+                    <label>gantengan aku atau martin, lino, ohyul? (Kamu/Mereka)</label>
+                    <input type="text" placeholder="Jawab di sini..." class="quiz-input">
+                </div>
+                <div class="quiz-item" id="q3">
+                    <label>Do you love me? (Yes/no)</label>
+                    <input type="text" placeholder="Jawab di sini..." class="quiz-input">
+                </div>
+                <button id="submit-quiz" class="glass-btn submit-btn">Cek Jawaban</button>
+
+                <div id="quiz-success" class="hidden">
+                    <img src="https://api.iconify.design/twemoji:cat-with-wry-smile.svg" alt="Cat Key"
+                        class="key-cat bounce">
+                    <p class="success-text">Yeay! Kunci surat cinta ditemukan 🔑</p>
+                    <button id="open-letter-btn" class="glass-btn unlock-btn">Buka Surat Cinta</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Love Letter Section -->
+        <section id="love-letter" class="hidden">
+            <div class="glass-card letter-card">
+                <div class="letter-content">
+                    <h3>Untuk Kesayanganku,</h3>
+                    <p>Selamat ulang tahun yang ke-20 sayangggg! Semoga di umur kamu yang baru ini kamu semakin dewasa, semakin
+                        bahagia, semakin kaya, semakin lucu, semakin cantik, semakin sayang sama aku (karena aku lebih ganteng dari martin, lino, dll) dan selalu menjadi alasan senyumku setiap harinya heueuehe.</p>
+                    <p>Makaciii cayang sudah nemeninn perjalanan aku. Aku harap kita bisa merayakan ulang tahun-ulang tahun
+                        berikutnya bareng2. Ini ada sedikit kejutan buat kamu!</p>
+                    <p>Semoga kamu suka ya! ❤️</p>
+                    <p class="signature">Dari Reyhan</p>
+                </div>
+
+                <div class="buttons-group">
+                    <button id="hug-btn" class="glass-btn">Klik untuk Pelukan 😻</button>
+                    <button id="play-vn-btn" class="glass-btn">Dengarkan Pesan Suara 🎧</button>
+                </div>
+
+                <!-- Audio Elements -->
+                <audio id="bg-music" loop>
+                    <source src="ilysb.mp3" type="audio/mpeg">
+                </audio>
+                <audio id="voice-note">
+                    <source src="pesansuara.mp3" type="audio/mp3">
+                </audio>
+            </div>
+        </section>
+    </main>
+    <div id="hug-modal"
+        style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(255,192,203,0.85); z-index:9999; justify-content:center; align-items:center; opacity:0; transition:opacity 0.5s;">
+        
+        <video id="hug-video" autoplay loop muted playsinline 
+            style="max-width:80%; max-height:80%; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); object-fit: cover;">
+            <source src="assets/hug.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <!-- Canvas Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
